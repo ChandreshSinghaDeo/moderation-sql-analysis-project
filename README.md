@@ -1,8 +1,16 @@
 # 📊 Moderation Data Analysis (SQL Project)
 
-## 🚀 Project Overview
+![SQL](https://img.shields.io/badge/SQL-MySQL-blue)
+![Project](https://img.shields.io/badge/Project-Data%20Analysis-green)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 
-This project demonstrates an end-to-end SQL-based data analysis pipeline on moderation log data. It includes data ingestion, cleaning, transformation, and advanced analytics using SQL.
+---
+
+## 🚀 Project Summary
+
+An end-to-end SQL project analyzing moderation logs, focusing on data ingestion, cleaning, transformation, and advanced analytical insights using real-world datasets.
+
+This project simulates how data analysts work with raw operational data to generate meaningful business insights.
 
 ---
 
@@ -12,7 +20,7 @@ This project demonstrates an end-to-end SQL-based data analysis pipeline on mode
 * Analyze violation patterns and moderation activity
 * Identify high-risk boards and spam sources
 * Evaluate moderator performance
-* Build insights for decision-making
+* Generate insights for business decision-making
 
 ---
 
@@ -35,8 +43,21 @@ This project demonstrates an end-to-end SQL-based data analysis pipeline on mode
   * `CASE WHEN`
 * Converted:
 
-  * Date formats
+  * Date formats (string → DATE/DATETIME)
   * Boolean values (Y/N → 1/0)
+
+---
+
+## 🧠 SQL Skills Demonstrated
+
+* Data Cleaning: `TRIM`, `NULLIF`, `CASE WHEN`
+* Date Handling: `STR_TO_DATE`, `DATE_FORMAT`
+* Aggregations: `COUNT`, `SUM`, `AVG`
+* Window Functions: `RANK`, `DENSE_RANK`, `ROW_NUMBER`, `LAG`, `LEAD`
+* Common Table Expressions (CTEs)
+* Conditional Aggregation
+* Subqueries & Derived Tables
+* Indexing for performance
 
 ---
 
@@ -44,8 +65,8 @@ This project demonstrates an end-to-end SQL-based data analysis pipeline on mode
 
 ### 🔹 Violation Analysis
 
-* Top violation categories
-* Percentage distribution of violations
+* Identified top violation categories
+* Calculated percentage distribution of violations
 
 ### 🔹 Trend Analysis
 
@@ -54,68 +75,83 @@ This project demonstrates an end-to-end SQL-based data analysis pipeline on mode
 
 ### 🔹 Moderator Performance
 
-* Ranking moderators using `RANK()`
-* Identifying above-average performers
+* Ranked moderators using window functions
+* Identified above-average performers
 
 ### 🔹 Board Risk Analysis
 
-* Boards with highest violations
-* Sub-board level insights
+* Identified boards with highest violations
+* Analyzed sub-board level issues
 
 ### 🔹 Spam Detection
 
-* Repeat spam IPs and emails
-* Duplicate user activity detection
+* Detected repeat spam IPs and emails
+* Identified duplicate user activity
 
 ---
 
-## ⚡ Advanced SQL Concepts Used
+## 📊 Key Insights
 
-* Window Functions (`RANK`, `LAG`, `LEAD`, `ROW_NUMBER`)
-* Common Table Expressions (CTEs)
-* Conditional Aggregation (`CASE WHEN`)
-* Subqueries and Derived Tables
+* Spam-related violations contribute significantly to moderation workload
+* Certain boards consistently generate higher violations (high-risk areas)
+* A small group of moderators handle the majority of actions
+* Moderation activity shows clear weekly and monthly trends
+* Repeated spam IPs indicate potential automated abuse
 
 ---
 
 ## 📁 Project Structure
 
 ```
-sql/
-├── 01_schema_and_load.sql
-├── 02_data_validation.sql
-├── 03_exploratory_analysis.sql
-├── 04_advanced_queries.sql
+moderation-sql-analysis-project/
+│
+├── README.md
+├── sql/
+│   ├── 01_schema_and_load.sql
+│   ├── 02_data_validation.sql
+│   ├── 03_exploratory_analysis.sql
+│   ├── 04_advanced_queries.sql
+│
+├── data/ (optional)
+├── screenshots/ (optional)
 ```
 
 ---
 
-## 📌 Key Insights
+## ⚙️ How to Run This Project
 
-* Certain boards consistently generate higher violations
-* Spam-related violations dominate moderation workload
-* A small group of moderators handle majority of actions
-* Moderation workload shows periodic spikes
+1. Clone this repository
+2. Open MySQL Workbench
+3. Run the SQL files in the following order:
+
+```
+sql/01_schema_and_load.sql
+sql/02_data_validation.sql
+sql/03_exploratory_analysis.sql
+sql/04_advanced_queries.sql
+```
+
+4. Ensure `local_infile` is enabled for data loading
 
 ---
 
 ## 💼 Business Impact
 
-* Helps prioritize moderation resources
-* Identifies high-risk areas for intervention
-* Improves spam detection strategy
-* Supports data-driven moderation decisions
+* Enables data-driven moderation decisions
+* Helps identify high-risk communities and spam patterns
+* Improves moderator performance evaluation
+* Supports workload planning and resource allocation
 
 ---
 
 ## 🚀 Future Enhancements
 
-* Power BI dashboard integration
-* Automated data pipeline using Python
-* Real-time moderation monitoring
+* Build Power BI dashboard for visualization
+* Automate pipeline using Python
+* Implement real-time monitoring system
 
 ---
 
 ## 👤 Author
 
-Chandresh Singhadeo
+**Chandresh Singhadeo**
